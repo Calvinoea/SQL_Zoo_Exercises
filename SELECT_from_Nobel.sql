@@ -46,3 +46,12 @@ SELECT * FROM nobel
 
 
 
+-- Show the winners with first name John
+
+SELECT winner
+FROM nobel
+WHERE winner LIKE 'John%'
+
+
+-- Show the year, subject, and name of Physics winners for 1980 together with the Chemistry winners for 1984.
+
