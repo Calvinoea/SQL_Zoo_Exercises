@@ -29,3 +29,9 @@ FROM world
 WHERE name = 'Estonia' OR name = 'Latvia' OR name = 'Lithuania'
 
 
+-- For each continent show the continent and number of countries.
+                          
+SELECT continent, COUNT(name)
+FROM world
+GROUP BY continent
+                     
