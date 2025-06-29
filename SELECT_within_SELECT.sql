@@ -14,6 +14,8 @@ FROM world
 WHERE gdp/population > (SELECT gdp/population FROM world WHERE name = 'United Kingdom') AND continent = 'Europe'
 
 
+
+
 -- List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
 
 SELECT name, continent
@@ -24,9 +26,9 @@ ORDER BY name
                                                             
 -- Which country has a population that is more than Canada but less than Poland? Show the name and the population.
                                                                
-SELECT name
+SELECT name, population
 FROM world
-WHERE population > (SELECT population FROM world WHERE name ='Canada') AND population < (SELECT population FROM world WHERE name = 'Poland') 
+WHERE population > (SELECT population FROM world WHERE name ='United Kingdom') AND population < (SELECT population FROM world WHERE name = 'Germany') 
                             
 
 -- Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.
