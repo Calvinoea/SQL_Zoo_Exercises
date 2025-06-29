@@ -63,6 +63,13 @@ where name = (select name
                   order by name asc 
                   limit 1)
                           
-                          
-     
+-- Find the continents where all countries have a population <= 25000000. Then find the names of the countries associated with these continents. Show name, continent and population.
+
+SELECT name, continent, population
+FROM world
+WHERE continent IN (
+  SELECT continent
+  FROM world
+  GROUP BY continent
+  HAVING MAX(population) <= 25000000);
 
